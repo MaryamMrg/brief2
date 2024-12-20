@@ -2,14 +2,14 @@ public class Book {
     public String title;
     public String author;
     public String isbn;
-    public boolean available;
+    public String available;
 
     public Book(String title, String author, String isbn) {
 
         this.title = title;
         this.author = author;
         this.isbn = isbn;
-        this.available = true;
+        this.available = available;
     }
 
     // Getters et Setters
@@ -36,20 +36,20 @@ public class Book {
         this.isbn = isbn; }
 
 
-    public boolean isAvailable() {
+    public String isAvailable() {
         return available; }
 
 
-    public void setAvailable(boolean available) {
+    public void setAvailable(String available) {
         this.available = available; }
 
     @Override
     public String toString() {
-        return "Livre{" +
-                "titre= " + title + '\'' +
-                ", auteur ='" + author + '\'' +
-                ", ISBN='" + isbn + '\'' +
-                ", disponible= " + available +
+        return "book{" +
+                " ' titre= '" + title + '\'' +
+                ", 'auteur ='" + author + '\'' +
+                ", 'ISBN='" + isbn + '\'' +
+                ", 'available= " +'\''+ available +
                 '}';
     }
 }

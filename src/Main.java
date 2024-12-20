@@ -9,14 +9,21 @@ import java.util.Scanner;
 
 
         public static void displayAllBooks() {
+
             if(books.size()==0){
                 System.out.println("no books yet to display");
-            }else {
+                return;
+            }
+
                 for (int i = 0; i < books.size(); i++) {
 
                     books.get(i).toString();
+                    System.out.println(books.get(i));
+
                 }
-            }
+            System.out.println("the list of books is : ");
+
+
         }
         public  static void  addBook (){
 
@@ -29,11 +36,25 @@ import java.util.Scanner;
             System.out.println("enter ISBN of the book: ");
             newBook.isbn= Main.scanner.nextLine();
             System.out.println("enter availability of the book ( yes/ no) ");
-            newBook.available = Main.scanner.nextBoolean();
+            newBook.available = Main.scanner.nextLine();
 
             books.add(newBook);
+            System.out.println("book added successfully thank you (^-^)");
         }
         public static void searchBook() {
+
+            System.out.println(" enter the isbn of the book you want to search:");
+            String isbn = Main.scanner.nextLine();
+            for (int i = 0; i < books.size(); i++) {
+                if(books.get(i).isbn.equals(isbn)){
+                    System.out.println(books.get(i));
+                    return;
+                }
+                else{
+                    System.out.println("book not found");
+                }
+
+            }
 
         }
         public static void removeBook() {
