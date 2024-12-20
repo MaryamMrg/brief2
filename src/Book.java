@@ -1,19 +1,55 @@
 public class Book {
-    private String Title;
-    private String author;
-    private String isbn;
-    private boolean Avialable;
+    public String title;
+    public String author;
+    public String isbn;
+    public boolean available;
+
     public Book(String title, String author, String isbn) {
-        this.Title = title;
+
+        this.title = title;
         this.author = author;
         this.isbn = isbn;
-        this.Avialable = true;
+        this.available = true;
     }
-    public String getTitle() { return Title; }
-    public String getAuthor() { return author; }
-    public String getIsbn() { return isbn; }
-    public boolean Available() { return Avialable; }
-    public void setAvailable(boolean available) { Avialable = Avialable; }
-    public String toString() { return "Title: " + Title + ", Author: " + author + ", ISBN: " + isbn + ", Available: " + Avialable;
-}
+
+    // Getters et Setters
+    public String getTitle() {
+        return title; }
+
+
+    public void setTitle(String title) {
+        this.title = title; }
+
+    public String getAuthor() {
+        return author; }
+
+
+    public void setAuthor(String author) {
+        this.author = author; }
+
+
+    public String getIsbn() {
+        return isbn; }
+
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn; }
+
+
+    public boolean isAvailable() {
+        return available; }
+
+
+    public void setAvailable(boolean available) {
+        this.available = available; }
+
+    @Override
+    public String toString() {
+        return "Livre{" +
+                "titre= " + title + '\'' +
+                ", auteur ='" + author + '\'' +
+                ", ISBN='" + isbn + '\'' +
+                ", disponible= " + available +
+                '}';
+    }
 }
