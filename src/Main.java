@@ -58,11 +58,21 @@ import java.util.Scanner;
 
         }
         public static void removeBook() {
-
-
+            System.out.println("enter the isbn of the book you want to remove:");
+              String isbn = Main.scanner.nextLine();
+              for(int i=0;i<books.size();i++){
+                  if(books.get(i).isbn.equals(isbn)){
+                      books.remove(i);
+                      System.out.println("book removed successfully (^-^)");
+                      return;
+                  }
+                  else{
+                      System.out.println("book not found");
+                  }
+              }
         }
         public static void updateBook() {
-
+            
         }
 
 
@@ -70,7 +80,7 @@ import java.util.Scanner;
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
             int choice=0;
-            while (choice!=4){
+            while (choice!=6){
                 System.out.println("====System management library====");
                 System.out.println("======         MENU        ======");
                 System.out.println("1.========  Add a book =========");
