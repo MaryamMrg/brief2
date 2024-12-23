@@ -72,7 +72,22 @@ import java.util.Scanner;
               }
         }
         public static void updateBook() {
-            
+            System.out.println("enter the isbn of the book you want to update:");
+            String isbn = Main.scanner.nextLine();
+            for(int i=0;i<books.size();i++){
+                if(books.get(i).isbn.equals(isbn)){
+                    System.out.println("enter the new title of the book:");
+                    books.get(i).title = Main.scanner.nextLine();
+                    System.out.println("enter the new author of the book:");
+                    books.get(i).author = Main.scanner.nextLine();
+                    System.out.println("enter the new availability of the book:");
+                    books.get(i).available = Main.scanner.nextLine();
+                    System.out.println("book updated successfully (^-^)");
+                    return;
+                }else{
+                    System.out.println("book not found");
+                }
+            }
         }
 
 
