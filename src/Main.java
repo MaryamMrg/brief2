@@ -66,8 +66,10 @@ import java.util.Scanner;
                       System.out.println("book removed successfully (^-^)");
                       return;
                   }
-                  else{
+                  if(books.size()==0){
+
                       System.out.println("book not found");
+                      return;
                   }
               }
         }
