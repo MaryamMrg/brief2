@@ -6,13 +6,13 @@ public class Book {
 
     public Book(String title, String author, String isbn) {
 
-        this.title = title;
-        this.author = author;
-        this.isbn = isbn;
-        this.available = available;
+      title = title;
+        author = author;
+        isbn = isbn;
+        available = available;
     }
 
-   
+
     public String toString() {
         return "book{" +
                 " ' titre= '" + title + '\'' +
